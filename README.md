@@ -1,8 +1,8 @@
 # RustDesk | Your Remote Desktop Software
 
-The best open-source remote desktop client software, written in Rust. Works out of the box, no configuration required. Great alternative to TeamViewer and AnyDesk! You have full control of your data, with no concerns about security. You can use our rendezvous/relay server, [set up your own](https://rustdesk.com/blog/id-relay-set/), or write your own rendezvous/relay server. 
+最好的开源远程桌面客户端软件，用Rust编写。开箱即用，无需配置。TeamViewer和AnyDesk的伟大选择!您可以完全控制您的数据，而无需担心安全性。您可以使用我们的会合/中继服务器，[设置您自己的](https://rustdesk.com/blog/id-relay-set/)，或编写您自己的会合/中继服务器。
 
-[**BINARY DOWNLOAD**](https://github.com/rustdesk/rustdesk/releases)
+(**二进制下载**)(https://github.com/rustdesk/rustdesk/releases)
 
 ## Dependencies
 
