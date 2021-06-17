@@ -4,19 +4,19 @@
 
 (**二进制下载**)(https://github.com/rustdesk/rustdesk/releases)
 
-## Dependencies
+## 依赖关系
 
-Desktop versions use [sciter](https://sciter.com/) for GUI, please download sciter dynamic library yourself.
+桌面版本使用[sciter](https://sciter.com/)为GUI，请自己下载sciter动态库。
 
 [Windows](https://github.com/c-smile/sciter-sdk/blob/dc65744b66389cd5a0ff6bdb7c63a8b7b05a708b/bin.win/x64/sciter.dll)
 [Linux](https://github.com/c-smile/sciter-sdk/raw/dc65744b66389cd5a0ff6bdb7c63a8b7b05a708b/bin.lnx/x64/libsciter-gtk.so)
 [Osx](https://github.com/c-smile/sciter-sdk/raw/dc65744b66389cd5a0ff6bdb7c63a8b7b05a708b/bin.osx/sciter-osx-64.dylib)
 
 
-## Raw steps to build
-* Prepare your Rust development env and C++ build env
+## 构建的原始步骤
+* 准备您的锈开发环境和c++构建环境
 
-* Install [vcpkg](https://github.com/microsoft/vcpkg), and set `VCPKG_ROOT` env variable correctly
+* 安装[vcpkg](https://github.com/microsoft/vcpkg)，并正确设置“VCPKG_ROOT”env变量
 
    - Windows: vcpkg install libvpx:x64-windows-static libyuv:x64-windows-static opus:x64-windows-static
    - Linux/Osx: vcpkg install libvpx libyuv opus
@@ -72,10 +72,10 @@ mv libsciter-gtk.so target/debug
 cargo run
 ```
 
-### Change Wayland to X11 (Xorg)
-RustDesk does not support Wayland. Check [this](https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/) to configuring Xorg as the default GNOME session.
+### 将Wayland改为X11 (Xorg)
+RustDesk不支持Wayland。检查[this](https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/)将Xorg配置为默认的GNOME会话。
 
-## File Structure
+## 文件结构
 
 - **[libs/hbb_common](https://github.com/rustdesk/rustdesk/tree/master/libs/hbb_common)**: video codec, config, tcp/udp wrapper, protobuf, fs functions for file transfer, and some other utility functions
 - **[libs/scrap](https://github.com/rustdesk/rustdesk/tree/master/libs/scrap)**: screen capture
@@ -86,7 +86,7 @@ RustDesk does not support Wayland. Check [this](https://docs.fedoraproject.org/e
 - **[src/rendezvous_mediator.rs](https://github.com/rustdesk/rustdesk/tree/master/src/rendezvous_mediator.rs)**: Communicate with [rustdesk-server](https://github.com/rustdesk/rustdesk-server), wait for remote direct (TCP hole punching) or relayed connection
 - **[src/platform](https://github.com/rustdesk/rustdesk/tree/master/src/platform)**: platform specific code
 
-## Snapshot
+## 快照
 ![image](https://user-images.githubusercontent.com/71636191/113112362-ae4deb80-923b-11eb-957d-ff88daad4f06.png)
 
 ![image](https://user-images.githubusercontent.com/71636191/113112619-f705a480-923b-11eb-911d-97e984ef52b6.png)
